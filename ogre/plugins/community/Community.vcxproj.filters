@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="source">
+      <UniqueIdentifier>{2e55c504-191c-40d3-b5cf-a58159789a3b}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Include\CollisionTools.h">
+      <Filter>source</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\SelectionBox.h">
+      <Filter>source</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\ViewportGrid.h">
+      <Filter>source</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\DllCommunityRequisites.h">
+      <Filter>source</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\OrientedBoundingBox.h">
+      <Filter>source</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Source\CollisionTools.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\SelectionBox.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\ViewportGrid.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\OrientedBoundingBox.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

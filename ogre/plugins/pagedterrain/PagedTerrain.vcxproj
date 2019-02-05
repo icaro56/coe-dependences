@@ -1,0 +1,250 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{3AE9C94D-E80A-492F-819D-15504618208E}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>PagedTerrain</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(SolutionDir)\lib\$(Platform)\</OutDir>
+    <TargetName>$(ProjectName)_d</TargetName>
+    <IntDir>temp\$(Platform)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(SolutionDir)\lib\$(Platform)\</OutDir>
+    <TargetName>$(ProjectName)_d</TargetName>
+    <IntDir>temp\$(Platform)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(SolutionDir)\lib\$(Platform)\</OutDir>
+    <IntDir>temp\$(Platform)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(SolutionDir)\lib\$(Platform)\</OutDir>
+    <IntDir>temp\$(Platform)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;PAGEDTERRAIN_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\include;..\..\..\boost;src;..\..\include\Overlay;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <StringPooling>true</StringPooling>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>..\..\..\boost\lib\$(Platform);..\..\lib\$(Platform);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>OgreMain_d.lib;Plugin_OctreeSceneManager_d.lib;OgreOverlay_d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>lib\$(Platform)\$(TargetName)$(TargetExt)</OutputFile>
+      <StackReserveSize>10000000</StackReserveSize>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy "$(SolutionDir)lib\$(Platform)\$(TargetFileName)" "$(SolutionDir)\..\..\..\..\bin\$(Platform)\$(Configuration)"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;PAGEDTERRAIN_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\include;..\..\..\boost;src;..\..\include\Overlay;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>/favor:blend %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>..\..\..\boost\lib\$(Platform);..\..\lib\$(Platform);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>OgreMain_d.lib;Plugin_OctreeSceneManager_d.lib;OgreOverlay_d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>lib\$(Platform)\$(TargetName)$(TargetExt)</OutputFile>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy "$(SolutionDir)lib\$(Platform)\$(TargetFileName)" "$(SolutionDir)\..\..\..\..\bin\$(Platform)\$(Configuration)"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>Full</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;PAGEDTERRAIN_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\include;..\..\..\boost;src;..\..\include\Overlay;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <StringPooling>true</StringPooling>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <OutputFile>lib\$(Platform)\$(TargetName)$(TargetExt)</OutputFile>
+      <AdditionalDependencies>OgreMain.lib;Plugin_OctreeSceneManager.lib;OgreOverlay.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\..\..\boost\lib\$(Platform);..\..\lib\$(Platform);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <StackReserveSize>10000000</StackReserveSize>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy "$(SolutionDir)lib\$(Platform)\$(TargetFileName)" "$(SolutionDir)\..\..\..\..\bin\$(Platform)\$(Configuration)"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>Full</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;PAGEDTERRAIN_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\include;..\..\..\boost;src;..\..\include\Overlay;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <AdditionalOptions>/favor:blend %(AdditionalOptions)</AdditionalOptions>
+      <StringPooling>true</StringPooling>
+      <EnablePREfast>false</EnablePREfast>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <OutputFile>lib\$(Platform)\$(TargetName)$(TargetExt)</OutputFile>
+      <AdditionalDependencies>OgreMain.lib;Plugin_OctreeSceneManager.lib;OgreOverlay.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\..\..\boost\lib\$(Platform);..\..\lib\$(Platform);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <StackReserveSize>10000000</StackReserveSize>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy "$(SolutionDir)lib\$(Platform)\$(TargetFileName)" "$(SolutionDir)\..\..\..\..\bin\$(Platform)\$(Configuration)"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="src\heightmap\Heightmap.cpp" />
+    <ClCompile Include="src\heightmap\HeightmapReader.cpp" />
+    <ClCompile Include="src\heightmap\HeightmapRules.cpp" />
+    <ClCompile Include="src\heightmap\PNGHeightmapReader.cpp" />
+    <ClCompile Include="src\heightmap\RAWHeightmapReader.cpp" />
+    <ClCompile Include="src\quadtree\QNode.cpp" />
+    <ClCompile Include="src\Terrain.cpp" />
+    <ClCompile Include="src\terrain\mesh\TerrainMesh.cpp" />
+    <ClCompile Include="src\terrain\modifiers\BrushDisplacement.cpp" />
+    <ClCompile Include="src\terrain\modifiers\CircleDisplacement.cpp" />
+    <ClCompile Include="src\terrain\modifiers\CloudDisplacement.cpp" />
+    <ClCompile Include="src\terrain\modifiers\PolygonDisplacement.cpp" />
+    <ClCompile Include="src\terrain\modifiers\RectFlatten.cpp" />
+    <ClCompile Include="src\terrain\modifiers\SplatDisplacement.cpp" />
+    <ClCompile Include="src\terrain\modifiers\SquareDisplacement.cpp" />
+    <ClCompile Include="src\utilities\brush\Brush.cpp" />
+    <ClCompile Include="src\utilities\edge\Edge.cpp" />
+    <ClCompile Include="src\utilities\lightmapper\GPULightmapper.cpp" />
+    <ClCompile Include="src\utilities\lightmapper\Lightmapper.cpp" />
+    <ClCompile Include="src\utilities\movabletext3d\MovableText.cpp" />
+    <ClCompile Include="src\utilities\objecthandler\ObjectHandler.cpp" />
+    <ClCompile Include="src\utilities\ssrender\ScreenSpaceRender.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\DllRequisites.h" />
+    <ClInclude Include="src\heightmap\Heightmap.h" />
+    <ClInclude Include="src\heightmap\HeightmapReader.h" />
+    <ClInclude Include="src\heightmap\HeightmapRules.h" />
+    <ClInclude Include="src\heightmap\PNGHeightmapReader.h" />
+    <ClInclude Include="src\heightmap\RAWHeightmapReader.h" />
+    <ClInclude Include="src\PTPrerequisites.h" />
+    <ClInclude Include="src\quadtree\QNode.h" />
+    <ClInclude Include="src\Terrain.h" />
+    <ClInclude Include="src\terrain\mesh\TerrainMesh.h" />
+    <ClInclude Include="src\terrain\modifiers\BrushDisplacement.h" />
+    <ClInclude Include="src\terrain\modifiers\CircleDisplacement.h" />
+    <ClInclude Include="src\terrain\modifiers\CloudDisplacement.h" />
+    <ClInclude Include="src\terrain\modifiers\PolygonDisplacement.h" />
+    <ClInclude Include="src\terrain\modifiers\RectFlatten.h" />
+    <ClInclude Include="src\terrain\modifiers\SplatDisplacement.h" />
+    <ClInclude Include="src\terrain\modifiers\SquareDisplacement.h" />
+    <ClInclude Include="src\terrain\modifiers\TerrainModifier.h" />
+    <ClInclude Include="src\utilities\brush\Brush.h" />
+    <ClInclude Include="src\utilities\edge\Edge.h" />
+    <ClInclude Include="src\utilities\lightmapper\GPULightmapper.h" />
+    <ClInclude Include="src\utilities\lightmapper\Lightmapper.h" />
+    <ClInclude Include="src\utilities\movabletext3d\MovableText.h" />
+    <ClInclude Include="src\utilities\objecthandler\ObjectHandler.h" />
+    <ClInclude Include="src\utilities\ssrender\ScreenSpaceRender.h" />
+    <ClInclude Include="src\utilities\vectors\Vec2D.h" />
+    <ClInclude Include="src\utilities\vectors\Vec3D.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

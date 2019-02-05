@@ -1,0 +1,243 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Header Files\heightmap">
+      <UniqueIdentifier>{81214614-bf59-40ac-af5e-466a94dc7318}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\terrain">
+      <UniqueIdentifier>{d044cc54-b5e1-49f2-a688-2808731807f5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\quadtree">
+      <UniqueIdentifier>{f44111de-0a23-45bb-8746-565f66a28e45}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\utilities">
+      <UniqueIdentifier>{d2359f8b-44ee-4185-ac55-9e222d0857ec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\heightmap">
+      <UniqueIdentifier>{1159a52d-3810-47e1-9317-60a74b242e51}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\utilities">
+      <UniqueIdentifier>{e1e29875-367e-4ffe-bafd-f017257a5c73}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\quadtree">
+      <UniqueIdentifier>{ae82c741-dead-45ef-8863-51f8c49c922c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\terrain">
+      <UniqueIdentifier>{e65afe94-ae18-4ee2-96f6-d0bd6dd6fc31}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\terrain\mesh">
+      <UniqueIdentifier>{d161fb4a-7c6f-4c72-be3f-27cfcc52f9b8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\terrain\modifiers">
+      <UniqueIdentifier>{7fdd03f9-842f-43ba-84fa-94a5a4d934cb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\terrain\mesh">
+      <UniqueIdentifier>{bf1ec070-f0be-41a9-b151-313bddb98063}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\terrain\modifiers">
+      <UniqueIdentifier>{dd3867d4-b8f5-4a1a-9a6b-7edeaab8ed7c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\utilities\brush">
+      <UniqueIdentifier>{2b355144-b01a-4c74-a5c8-a6d003b65cf8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\utilities\edge">
+      <UniqueIdentifier>{fea3de40-6b5d-4cda-8b89-de1c3eef06d4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\utilities\lightmapper">
+      <UniqueIdentifier>{2b064a5d-37f8-4627-886e-5ae0ac4cddc0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\utilities\movabletext3d">
+      <UniqueIdentifier>{b63e5f88-0315-4e96-b22c-f285adba2a7e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\utilities\objecthandler">
+      <UniqueIdentifier>{ddee278a-3647-4d55-a88b-9f706d3fff91}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\utilities\ssrender">
+      <UniqueIdentifier>{309a5aa0-af35-4cb3-a1f0-f4d9602d987e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\utilities\vectors">
+      <UniqueIdentifier>{fcb8850f-ebcb-4e89-ac5a-5bce6bf23e65}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\utilities\brush">
+      <UniqueIdentifier>{d01ddca1-058c-42e6-afe8-fb41dfe22dc8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\utilities\edge">
+      <UniqueIdentifier>{9b9cadf6-5532-4e62-b7c2-9d4b791e88c9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\utilities\lightmapper">
+      <UniqueIdentifier>{c019bbf8-c26b-4f90-b405-2057051d5506}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\utilities\movabletext3d">
+      <UniqueIdentifier>{6bbcb944-7e4e-485a-87c2-ab7c8d2e0093}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\utilities\ssrender">
+      <UniqueIdentifier>{8bb3c282-ee65-424e-891a-cadbdcc318db}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\utilities\objecthandler">
+      <UniqueIdentifier>{5dc17d36-4222-474d-ad20-de39ba61ff55}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\Terrain.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\heightmap\RAWHeightmapReader.h">
+      <Filter>Header Files\heightmap</Filter>
+    </ClInclude>
+    <ClInclude Include="src\heightmap\Heightmap.h">
+      <Filter>Header Files\heightmap</Filter>
+    </ClInclude>
+    <ClInclude Include="src\heightmap\HeightmapReader.h">
+      <Filter>Header Files\heightmap</Filter>
+    </ClInclude>
+    <ClInclude Include="src\heightmap\HeightmapRules.h">
+      <Filter>Header Files\heightmap</Filter>
+    </ClInclude>
+    <ClInclude Include="src\heightmap\PNGHeightmapReader.h">
+      <Filter>Header Files\heightmap</Filter>
+    </ClInclude>
+    <ClInclude Include="src\quadtree\QNode.h">
+      <Filter>Header Files\quadtree</Filter>
+    </ClInclude>
+    <ClInclude Include="src\terrain\mesh\TerrainMesh.h">
+      <Filter>Header Files\terrain\mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="src\terrain\modifiers\TerrainModifier.h">
+      <Filter>Header Files\terrain\modifiers</Filter>
+    </ClInclude>
+    <ClInclude Include="src\terrain\modifiers\BrushDisplacement.h">
+      <Filter>Header Files\terrain\modifiers</Filter>
+    </ClInclude>
+    <ClInclude Include="src\terrain\modifiers\CircleDisplacement.h">
+      <Filter>Header Files\terrain\modifiers</Filter>
+    </ClInclude>
+    <ClInclude Include="src\terrain\modifiers\PolygonDisplacement.h">
+      <Filter>Header Files\terrain\modifiers</Filter>
+    </ClInclude>
+    <ClInclude Include="src\terrain\modifiers\RectFlatten.h">
+      <Filter>Header Files\terrain\modifiers</Filter>
+    </ClInclude>
+    <ClInclude Include="src\terrain\modifiers\SplatDisplacement.h">
+      <Filter>Header Files\terrain\modifiers</Filter>
+    </ClInclude>
+    <ClInclude Include="src\utilities\brush\Brush.h">
+      <Filter>Header Files\utilities\brush</Filter>
+    </ClInclude>
+    <ClInclude Include="src\utilities\edge\Edge.h">
+      <Filter>Header Files\utilities\edge</Filter>
+    </ClInclude>
+    <ClInclude Include="src\utilities\lightmapper\Lightmapper.h">
+      <Filter>Header Files\utilities\lightmapper</Filter>
+    </ClInclude>
+    <ClInclude Include="src\utilities\lightmapper\GPULightmapper.h">
+      <Filter>Header Files\utilities\lightmapper</Filter>
+    </ClInclude>
+    <ClInclude Include="src\utilities\movabletext3d\MovableText.h">
+      <Filter>Header Files\utilities\movabletext3d</Filter>
+    </ClInclude>
+    <ClInclude Include="src\utilities\vectors\Vec3D.h">
+      <Filter>Header Files\utilities\vectors</Filter>
+    </ClInclude>
+    <ClInclude Include="src\utilities\vectors\Vec2D.h">
+      <Filter>Header Files\utilities\vectors</Filter>
+    </ClInclude>
+    <ClInclude Include="src\utilities\ssrender\ScreenSpaceRender.h">
+      <Filter>Header Files\utilities\ssrender</Filter>
+    </ClInclude>
+    <ClInclude Include="src\utilities\objecthandler\ObjectHandler.h">
+      <Filter>Header Files\utilities\objecthandler</Filter>
+    </ClInclude>
+    <ClInclude Include="src\DllRequisites.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\terrain\modifiers\SquareDisplacement.h">
+      <Filter>Header Files\terrain\modifiers</Filter>
+    </ClInclude>
+    <ClInclude Include="src\terrain\modifiers\CloudDisplacement.h">
+      <Filter>Header Files\terrain\modifiers</Filter>
+    </ClInclude>
+    <ClInclude Include="src\PTPrerequisites.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\Terrain.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\heightmap\Heightmap.cpp">
+      <Filter>Source Files\heightmap</Filter>
+    </ClCompile>
+    <ClCompile Include="src\heightmap\HeightmapReader.cpp">
+      <Filter>Source Files\heightmap</Filter>
+    </ClCompile>
+    <ClCompile Include="src\heightmap\HeightmapRules.cpp">
+      <Filter>Source Files\heightmap</Filter>
+    </ClCompile>
+    <ClCompile Include="src\heightmap\PNGHeightmapReader.cpp">
+      <Filter>Source Files\heightmap</Filter>
+    </ClCompile>
+    <ClCompile Include="src\heightmap\RAWHeightmapReader.cpp">
+      <Filter>Source Files\heightmap</Filter>
+    </ClCompile>
+    <ClCompile Include="src\quadtree\QNode.cpp">
+      <Filter>Source Files\quadtree</Filter>
+    </ClCompile>
+    <ClCompile Include="src\terrain\mesh\TerrainMesh.cpp">
+      <Filter>Source Files\terrain\mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="src\terrain\modifiers\BrushDisplacement.cpp">
+      <Filter>Source Files\terrain\modifiers</Filter>
+    </ClCompile>
+    <ClCompile Include="src\terrain\modifiers\CircleDisplacement.cpp">
+      <Filter>Source Files\terrain\modifiers</Filter>
+    </ClCompile>
+    <ClCompile Include="src\terrain\modifiers\PolygonDisplacement.cpp">
+      <Filter>Source Files\terrain\modifiers</Filter>
+    </ClCompile>
+    <ClCompile Include="src\terrain\modifiers\RectFlatten.cpp">
+      <Filter>Source Files\terrain\modifiers</Filter>
+    </ClCompile>
+    <ClCompile Include="src\terrain\modifiers\SplatDisplacement.cpp">
+      <Filter>Source Files\terrain\modifiers</Filter>
+    </ClCompile>
+    <ClCompile Include="src\utilities\brush\Brush.cpp">
+      <Filter>Source Files\utilities\brush</Filter>
+    </ClCompile>
+    <ClCompile Include="src\utilities\edge\Edge.cpp">
+      <Filter>Source Files\utilities\edge</Filter>
+    </ClCompile>
+    <ClCompile Include="src\utilities\lightmapper\GPULightmapper.cpp">
+      <Filter>Source Files\utilities\lightmapper</Filter>
+    </ClCompile>
+    <ClCompile Include="src\utilities\lightmapper\Lightmapper.cpp">
+      <Filter>Source Files\utilities\lightmapper</Filter>
+    </ClCompile>
+    <ClCompile Include="src\utilities\movabletext3d\MovableText.cpp">
+      <Filter>Source Files\utilities\movabletext3d</Filter>
+    </ClCompile>
+    <ClCompile Include="src\utilities\ssrender\ScreenSpaceRender.cpp">
+      <Filter>Source Files\utilities\ssrender</Filter>
+    </ClCompile>
+    <ClCompile Include="src\utilities\objecthandler\ObjectHandler.cpp">
+      <Filter>Source Files\utilities\objecthandler</Filter>
+    </ClCompile>
+    <ClCompile Include="src\terrain\modifiers\CloudDisplacement.cpp">
+      <Filter>Source Files\terrain\modifiers</Filter>
+    </ClCompile>
+    <ClCompile Include="src\terrain\modifiers\SquareDisplacement.cpp">
+      <Filter>Source Files\terrain\modifiers</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
